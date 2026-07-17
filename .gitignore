@@ -13,8 +13,6 @@ team10479_assets/
 verification/
 
 # Unused leftovers from earlier local reconstruction attempts.
-assets/10479-site.css
-assets/10479-site.js
 assets/client-*.js
 assets/main--*.js
 assets/print-CN*.js

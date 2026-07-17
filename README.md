@@ -1,6 +1,6 @@
-# team 10479 tech binder website
+# Team 10479 NEXUS Tech Binder
 
-Static GitHub Pages-ready version of the team 10479 tech binder website.
+Static GitHub Pages-ready Chinese technical binder for Team 10479's 2026 robot, NEXUS. The visual system and interaction pattern follow the HighTide 2026 binder reference; all visible robot content and media are local Team 10479 assets.
 
 ## publish on github pages
 
@@ -14,18 +14,14 @@ No build step is required. The deployable entry point is `index.html` at the rep
 
 ## local preview
 
-Open `index.html` directly in a browser, or run:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://127.0.0.1:8000/`.
+Open `index.html` directly in a browser. The complete site, including the interactive 3D viewer, works from `file://` without a local server or internet connection.
 
 ## files
 
 - `index.html` is the interactive website.
-- `print.html` is the print-style view.
 - `assets/`, `binder_assets/`, and `fonts/` are local static assets required by the site.
-- `mentor-needed-assets.md` is the current mechanical asset request list.
+- `scripts/prepare_robot_assets.py` deterministically rebuilds the optimized robot imagery from Leo's supplied source files.
+- `binder_assets/10479/3d/nexus-web.glb` is the 23 MB browser LOD generated from the untouched 748.5 MB SolidWorks GLB.
+- `binder_assets/10479/3d/nexus-web-data.js` mirrors that LOD for direct offline opening; hosted copies continue loading the smaller `.glb` asset normally.
 
+The site makes no runtime requests. Three.js, its loaders, every image, and the GLB are stored in the repository, so the complete experience works without internet when opened directly or published on GitHub Pages.
