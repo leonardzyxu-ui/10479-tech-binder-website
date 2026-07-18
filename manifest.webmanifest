@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "Team 10479 NEXUS 2026 技术手册",
+  "short_name": "NEXUS Binder",
+  "description": "Team 10479 Powerhouse 2026 NEXUS 技术手册",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#59ab37",
+  "icons": [
+    {
+      "src": "pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

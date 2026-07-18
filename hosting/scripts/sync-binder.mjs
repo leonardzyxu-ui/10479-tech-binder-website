@@ -9,7 +9,17 @@ const targetDir = resolve(hostingDir, "public/binder");
 await rm(targetDir, { recursive: true, force: true });
 await mkdir(targetDir, { recursive: true });
 
-for (const entry of ["index.html", "favicon.png", "assets", "binder_assets", "fonts"]) {
+for (const entry of [
+  "index.html",
+  "favicon.png",
+  "manifest.webmanifest",
+  "pwa-icon-192.png",
+  "pwa-icon-512.png",
+  "service-worker.js",
+  "assets",
+  "binder_assets",
+  "fonts",
+]) {
   await cp(resolve(sourceDir, entry), resolve(targetDir, entry), { recursive: true });
 }
 

@@ -33,7 +33,7 @@ test("redirects the site root to the static Tech Binder", async () => {
   );
 });
 
-test("packages the complete Team 10479 binder and QR", async () => {
+test("packages the complete installable Team 10479 binder", async () => {
   const publicRoot = new URL("../public/binder/", import.meta.url);
   const html = await readFile(new URL("index.html", publicRoot), "utf8");
 
@@ -42,10 +42,16 @@ test("packages the complete Team 10479 binder and QR", async () => {
   assert.match(html, /PowerScout/);
   assert.match(html, /扫码查看技术手册/);
   assert.match(html, /site-qr\.png/);
+  assert.match(html, /manifest\.webmanifest/);
+  assert.match(html, /serviceWorker\.register/);
 
   await Promise.all([
     access(new URL("binder_assets/10479/site-qr.png", publicRoot)),
     access(new URL("binder_assets/10479/3d/nexus-web.glb", publicRoot)),
     access(new URL("assets/10479-3d-viewer.bundle.js", publicRoot)),
+    access(new URL("manifest.webmanifest", publicRoot)),
+    access(new URL("service-worker.js", publicRoot)),
+    access(new URL("pwa-icon-192.png", publicRoot)),
+    access(new URL("pwa-icon-512.png", publicRoot)),
   ]);
 });

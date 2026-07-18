@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Team 10479 Powerhouse 2026 NEXUS 技术手册">
+    <meta name="theme-color" content="#59ab37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="NEXUS Binder">
     <title>Team 10479 | NEXUS 2026 技术手册</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="pwa-icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="fonts/google-fonts.css">
     <link rel="stylesheet" href="assets/main-CNRF1Wgj.css">
     <link rel="stylesheet" href="assets/10479-site.css">
@@ -173,5 +178,12 @@
       }
     </script>
     <script src="assets/10479-3d-viewer.bundle.js"></script>
+    <script>
+      if ("serviceWorker" in navigator && window.location.protocol !== "file:") {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+        });
+      }
+    </script>
   </body>
 </html>
