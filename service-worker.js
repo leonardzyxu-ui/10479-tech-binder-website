@@ -1,4 +1,4 @@
-const CACHE_NAME = "team10479-nexus-v1";
+const CACHE_NAME = "team10479-nexus-v2";
 
 const PRECACHE = [
   "./index.html",
