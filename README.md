@@ -26,3 +26,7 @@ Open `index.html` directly in a browser. The complete site, including the intera
 - `hosted-assets/nexus-web.glb` is a separate 424,162-triangle Sites LOD; it keeps the same camera controls while fitting the public deployment package.
 
 The site makes no runtime requests. Three.js, its loaders, every image, and the GLB are stored in the repository, so the complete experience works without internet when opened directly or published on GitHub Pages.
+
+## Current single-file iPad package
+
+Run `node scripts/build-ipad-offline.mjs` to generate `ipad-offline/index.html`. That file packages this current binder, including the interactive GLB viewer and offline Base64 model fallback, into one portable HTML file. It is distinct from the older July 4 reconstruction under `Other/Codex Artifacts`.
