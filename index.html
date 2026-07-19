@@ -24,12 +24,15 @@
         </a>
         <div class="nav-links">
           <a href="#robot-3d">3D 整机</a>
+          <a href="#strategy">策略</a>
           <a href="#drivetrain">机械</a>
-          <a href="#software">软件</a>
-          <a href="#design-view">设计视图</a>
+          <a href="#software">程序与算法</a>
           <a href="#simulator">模拟</a>
         </div>
-        <button class="nav-menu-toggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="nav-controls">
+          <button class="nav-site-fullscreen" type="button" data-site-fullscreen aria-label="全屏查看技术手册" title="全屏" aria-pressed="false"><span aria-hidden="true">⛶</span></button>
+          <button class="nav-menu-toggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
       </div>
     </nav>
 
@@ -52,15 +55,15 @@
                 <line x1="78%" y1="22.7%" x2="59.5%" y2="29.4%" class="leader-line" data-key="turret"></line>
                 <line x1="78%" y1="73.1%" x2="57.4%" y2="62.5%" class="leader-line" data-key="drivetrain"></line>
                 <line x1="78%" y1="42%" x2="54%" y2="48%" class="leader-line" data-key="indexer"></line>
-                <line x1="26%" y1="47.9%" x2="41.8%" y2="53.8%" class="leader-line" data-key="overall"></line>
-                <line x1="26%" y1="80.8%" x2="41.2%" y2="78.1%" class="leader-line" data-key="intake"></line>
+                <line x1="20.5%" y1="47.9%" x2="41.8%" y2="53.8%" class="leader-line" data-key="overall"></line>
+                <line x1="20.5%" y1="80.8%" x2="41.2%" y2="78.1%" class="leader-line" data-key="intake"></line>
               </svg>
               <button class="callout callout-full is-active" type="button" data-key="full"><span class="callout-label"><span class="callout-title">整机</span></span></button>
               <a class="callout callout-right" href="#turret" data-key="turret" style="--lx:78%;--ly:22.7%;--dx:59.5%;--dy:29.4%"><span class="callout-label"><span class="callout-title">炮塔</span><span class="callout-line">双炮塔集成飞轮、Hood、Limelight 与动态射击控制。</span></span><span class="callout-dot"></span></a>
               <a class="callout callout-right" href="#drivetrain" data-key="drivetrain" style="--lx:78%;--ly:73.1%;--dx:57.4%;--dy:62.5%"><span class="callout-label"><span class="callout-title">底盘</span><span class="callout-line">690 mm 方形 MK4N swerve 底盘，驱动减速比 6.75:1。</span></span><span class="callout-dot"></span></a>
               <a class="callout callout-right" href="#indexer" data-key="indexer" style="--lx:78%;--ly:42%;--dx:54%;--dy:48%"><span class="callout-label"><span class="callout-title">Indexer</span><span class="callout-line">滚轮持续整理 FUEL，并分别输送至两套炮塔。</span></span><span class="callout-dot"></span></a>
-              <a class="callout callout-left" href="#overall" data-key="overall" style="--lx:26%;--ly:47.9%;--dx:41.8%;--dy:53.8%"><span class="callout-label"><span class="callout-title">整机布局</span><span class="callout-line">Intake、Indexer、双炮塔与底盘紧凑集成。</span></span><span class="callout-dot"></span></a>
-              <a class="callout callout-left" href="#intake" data-key="intake" style="--lx:26%;--ly:80.8%;--dx:41.2%;--dy:78.1%"><span class="callout-label"><span class="callout-title">Intake</span><span class="callout-line">Kraken X60 驱动滚轮，Kraken X44 控制展开。</span></span><span class="callout-dot"></span></a>
+              <a class="callout callout-left" href="#overall" data-key="overall" style="--lx:20.5%;--ly:47.9%;--dx:41.8%;--dy:53.8%"><span class="callout-label"><span class="callout-title">整机布局</span><span class="callout-line">Intake、Indexer、双炮塔与底盘紧凑集成。</span></span><span class="callout-dot"></span></a>
+              <a class="callout callout-left" href="#intake" data-key="intake" style="--lx:20.5%;--ly:80.8%;--dx:41.2%;--dy:78.1%"><span class="callout-label"><span class="callout-title">Intake</span><span class="callout-line">Kraken X60 驱动滚轮，Kraken X44 控制展开。</span></span><span class="callout-dot"></span></a>
             </div>
           </div>
           <a href="#contents" class="hero-skip" aria-label="前往目录"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v12m0 0-4-4m4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
@@ -99,61 +102,123 @@
         <div class="container contents">
           <div class="contents-head reveal"><h2>目录</h2><span class="rule"></span><span class="label">INDEX</span></div>
           <div class="contents-group reveal"><div class="contents-group-title">交互</div><div class="contents-list"><a href="#robot-3d"><span class="num">3D</span><span class="title">NEXUS 整机</span></a></div></div>
+          <div class="contents-group reveal"><div class="contents-group-title">策略分析</div><div class="contents-list"><a href="#strategy"><span class="num">01</span><span class="title">赛季任务与策略方案</span></a></div></div>
           <div class="contents-group reveal"><div class="contents-group-title">机械</div><div class="contents-list">
-            <a href="#drivetrain"><span class="num">01</span><span class="title">底盘</span></a><a href="#overall"><span class="num">02</span><span class="title">整机布局</span></a><a href="#indexer"><span class="num">03</span><span class="title">Indexer</span></a><a href="#intake"><span class="num">04</span><span class="title">Intake</span></a><a href="#turret"><span class="num">05</span><span class="title">炮塔</span></a>
+            <a href="#overall"><span class="num">02</span><span class="title">整机布局</span></a><a href="#drivetrain"><span class="num">03</span><span class="title">底盘</span></a><a href="#intake"><span class="num">04</span><span class="title">Intake</span></a><a href="#indexer"><span class="num">05</span><span class="title">Indexer</span></a><a href="#turret"><span class="num">06</span><span class="title">炮塔</span></a>
           </div></div>
-          <div class="contents-group reveal"><div class="contents-group-title">软件</div><div class="contents-list"><a href="#software"><span class="num">06</span><span class="title">软件与控制</span></a></div></div>
-          <div class="contents-group reveal"><div class="contents-group-title">设计视图</div><div class="contents-list"><a href="#design-view"><span class="num">07</span><span class="title">线稿与最终设计</span></a></div></div>
-          <div class="contents-group reveal"><div class="contents-group-title">模拟</div><div class="contents-list"><a href="#simulator"><span class="num">08</span><span class="title">Powerhouse Simulator</span></a></div></div>
+          <div class="contents-group reveal"><div class="contents-group-title">程序与算法</div><div class="contents-list"><a href="#software"><span class="num">07</span><span class="title">机器人控制系统</span></a><a href="#localization"><span class="num">08</span><span class="title">状态估计与定位</span></a><a href="#autonomous-control"><span class="num">09</span><span class="title">自动程序与底盘控制</span></a><a href="#systems-control"><span class="num">10</span><span class="title">电源与状态反馈</span></a><a href="#turret-algorithms"><span class="num">11</span><span class="title">炮塔算法</span></a></div></div>
+          <div class="contents-group reveal"><div class="contents-group-title">设计与模拟</div><div class="contents-list"><a href="#design-view"><span class="num">12</span><span class="title">线稿与最终设计</span></a><a href="#simulator"><span class="num">13</span><span class="title">Powerhouse Simulator</span></a></div></div>
+        </div>
+      </section>
+
+      <section class="bleed warm technical-section" id="strategy">
+        <div class="technical-inner">
+          <div class="technical-head reveal"><div class="subsystem-eyebrow">策略分析 · 01</div><h2 class="subsystem-title">赛季任务与策略方案</h2><p class="subsystem-tagline">围绕排名分与单位时间得分效率，把 NEXUS 的资源集中在 FUEL 循环</p></div>
+          <div class="strategy-layout">
+            <figure class="technical-visual reveal" data-lightbox-group><img src="binder_assets/10479/robot-angle.webp" alt="NEXUS 最终整机侧视图"></figure>
+            <div class="technical-cards strategy-cards">
+              <article class="technical-card reveal"><span class="tech-index">排位赛</span><h3>优先获取排名分</h3><p>目标是在每场比赛投放至少 100 个 FUEL，并向 360 个 FUEL 的“超级充能”门槛推进。赛前装载 8 个 FUEL，持续压缩收集、输送和发射周期。</p></article>
+              <article class="technical-card reveal"><span class="tech-index">淘汰赛</span><h3>联盟分工最大化总分</h3><p>两台得分效率更高的机器人负责收集与投放 FUEL，另一台承担防守。策略按联盟配置调整，不把单机数据置于联盟结果之上。</p></article>
+              <article class="technical-card reveal"><span class="tech-index">设计取舍</span><h3>资源聚焦 FUEL</h3><p>团队比较赛季任务的时间成本、得分收益与排名分回报后，把机械、程序、空间、重量与供电资源集中投入 FUEL 循环。</p></article>
+              <article class="technical-card reveal"><span class="tech-index">比赛执行</span><h3>高速循环与半自动射击</h3><p>底盘覆盖场地并保持机动；Limelight 4 与 AprilTag 支持自动对准；Intake、Indexer 与双炮塔持续完成收集、整理、输送与发射。</p></article>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="bleed cream" id="drivetrain"><div class="subsystem"><div class="subsystem-showcase">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 01</div><h2 class="subsystem-title">底盘</h2><p class="subsystem-tagline">690 mm 方形 MK4N swerve 底盘，以紧凑布局兼顾速度、精度与稳定性。</p></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 03</div><h2 class="subsystem-title">底盘</h2><p class="subsystem-tagline">690 mm 方形 MK4N swerve 底盘，以紧凑布局兼顾速度、精度与稳定性</p></div>
         <div class="subsystem-figure reveal"><div class="subsystem-images" data-toggle data-lightbox-group><img class="active" src="binder_assets/10479/chassis.webp" alt="NEXUS 底盘总成" data-label="底盘"><img src="binder_assets/10479/swerve.webp" alt="NEXUS swerve 模组" data-label="swerve 模组"></div><div class="subsystem-toggle-pills"></div></div>
         <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>27.16 in × 27.16 in（690 mm × 690 mm）方形车架</li><li>MK4N swerve 模组：驱动减速比 6.75:1，转向减速比 24:1</li><li>Kraken X60 负责驱动，Kraken X44 负责转向</li><li>电池直立安装在 Indexer 下方并靠近整机中心</li><li>电子系统包括 roboRIO 2.0、VH109、Power Distribution Panel 2.0、Mini Power Module、两台 Limelight 4 与 Pigeon 2.0</li></ul></div>
       </div></div></section>
 
       <section class="bleed warm" id="overall"><div class="subsystem"><div class="subsystem-showcase">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 02</div><h2 class="subsystem-title">整机布局</h2><p class="subsystem-tagline">NEXUS 围绕 FUEL 得分与短周期运行进行整机集成。</p></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 02</div><h2 class="subsystem-title">整机布局</h2><p class="subsystem-tagline">NEXUS 围绕 FUEL 得分与短周期运行进行整机集成</p></div>
         <div class="subsystem-figure reveal"><div class="subsystem-images" data-lightbox-group><img class="active" src="binder_assets/10479/robot-angle.webp" alt="NEXUS 最终整机布局"></div></div>
-        <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>机械系统由 swerve 底盘、Intake、Indexer、双炮塔与爬升机构组成</li><li>设计优先级聚焦 FUEL 得分、周期时间与避开防守</li><li>电池与主要机构围绕整机中心紧凑布置</li><li>本赛季策略不把爬升作为主要得分方向</li></ul></div>
+        <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>机械系统由 swerve 底盘、Intake、Indexer、料仓与双炮塔组成</li><li>设计优先级聚焦 FUEL 得分、周期时间与避开防守</li><li>电池直立安装在 Indexer 下方，主要机构围绕整机中心紧凑布置</li><li>空间、重量与供电资源全部服务于高效率 FUEL 循环</li></ul></div>
       </div></div></section>
 
       <section class="bleed cream" id="indexer"><div class="subsystem"><div class="subsystem-showcase">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 03</div><h2 class="subsystem-title">Indexer</h2><p class="subsystem-tagline">从料仓连续整理并输送 FUEL，分别送往两套炮塔。</p></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 05</div><h2 class="subsystem-title">Indexer</h2><p class="subsystem-tagline">从料仓连续整理并输送 FUEL，分别送往两套炮塔</p></div>
         <div class="subsystem-figure reveal"><div class="subsystem-images" data-lightbox-group><img class="active" src="binder_assets/10479/indexer.webp" alt="NEXUS Indexer"></div></div>
         <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>1 台 Kraken X44 以 1:3 传动大滚轮，将 FUEL 从料仓向炮塔输送</li><li>2 台 Kraken X44 以 4:1 传动 6 个大滚轮与 6 个小滚轮</li><li>双路输送分别服务两套炮塔</li><li>Indexer 位于整机中央，并与 Intake、炮塔和电池布局协同设计</li></ul></div>
       </div></div></section>
 
       <section class="bleed warm" id="intake"><div class="subsystem"><div class="subsystem-showcase">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 04</div><h2 class="subsystem-title">Intake</h2><p class="subsystem-tagline">面向短周期收集的轻量化 Intake，兼顾展开控制与持续进料。</p></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 04</div><h2 class="subsystem-title">Intake</h2><p class="subsystem-tagline">面向短周期收集的轻量化 Intake，兼顾展开控制与持续进料</p></div>
         <div class="subsystem-figure reveal"><div class="subsystem-images" data-lightbox-group><img class="active" src="binder_assets/10479/intake.webp" alt="NEXUS Intake"></div></div>
         <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>Kraken X44 通过 45:1 减速驱动展开与收回</li><li>Kraken X60 通过 3.33:1 传动驱动收集滚轮</li><li>主体使用铝合金与聚碳酸酯材料</li><li>机构与 Indexer 直接衔接，缩短 FUEL 进入整机后的输送路径</li></ul></div>
       </div></div></section>
 
       <section class="bleed cream" id="turret"><div class="subsystem"><div class="subsystem-showcase">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 05</div><h2 class="subsystem-title">炮塔</h2><p class="subsystem-tagline">两套独立炮塔集成旋转、飞轮、Hood、Limelight 视觉与动态射击解算。</p></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">机械 · 06</div><h2 class="subsystem-title">炮塔</h2><p class="subsystem-tagline">两套独立炮塔集成旋转、飞轮、Hood、Limelight 视觉与动态射击解算</p></div>
         <div class="subsystem-figure reveal"><div class="subsystem-images" data-lightbox-group><img class="active" src="binder_assets/10479/shooter.webp" alt="NEXUS 双炮塔总成"></div></div>
         <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>每套炮塔使用 1 台 Kraken X60 驱动飞轮，包胶铝轮与铜制惯性轮用于储存射击能量</li><li>Kraken X44 与 37:1 减速箱控制炮塔旋转</li><li>Hood／背板由 Kraken X44 通过 124.55:1 齿轮与同步带系统控制，提供约 30° 的出射轨迹调节</li><li>每套炮塔顶部安装 Limelight，摄像头后方设有散热风扇</li><li>两套炮塔安装在 Indexer 上方，由双路输送分别供料</li><li>动态射击会补偿机器人平移、旋转与炮塔相对整机中心的偏移</li></ul></div>
       </div></div></section>
 
       <section class="bleed warm" id="software"><div class="subsystem"><div class="subsystem-showcase">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">软件 · 06</div><h2 class="subsystem-title">软件与控制</h2><p class="subsystem-tagline">模块化架构把定位、路径规划、闭环控制与动态射击整合进统一调度。</p></div>
-        <div class="subsystem-figure reveal"><div class="subsystem-images" data-toggle data-lightbox-group><img class="active" src="binder_assets/10479/software-dynamic-solver.webp" alt="Tech Binder 动态射击解算器图" data-label="动态射击解算"><img src="binder_assets/10479/software-shot-readiness.webp" alt="Tech Binder 发射就绪判定图" data-label="发射就绪判定"></div><div class="subsystem-toggle-pills"></div></div>
-        <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>两台 Limelight 4、Pigeon 2.0、CANcoder 与 swerve 编码器共同参与状态估计</li><li>Kalman filtering 融合里程计与 AprilTag 观测，并使用动态置信度与拒绝门限</li><li>PathPlanner 与 LocalADStar 负责全局路径和局部绕障</li><li>PID 与 Feedforward 共同控制底盘、飞轮、炮塔与 Hood</li><li>动态射击使用距离、飞轮速度、Hood 角度、飞行时间与运动补偿；求解器进行 20 次迭代</li></ul></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">程序与算法 · 07</div><h2 class="subsystem-title">机器人控制系统</h2><p class="subsystem-tagline">模块化架构把底盘、炮塔、Indexer、Intake 与视觉系统纳入统一指令调度</p></div>
+        <div class="subsystem-figure reveal"><div class="subsystem-images" data-toggle data-lightbox-group><img class="active" src="binder_assets/10479/binder-diagrams/architecture.webp" alt="Tech Binder 模块化程序架构" data-label="系统架构"><img src="binder_assets/10479/binder-diagrams/autonomous.webp" alt="自动模式路径规划界面" data-label="自动模式"><img src="binder_assets/10479/binder-diagrams/teleop.webp" alt="遥控模式程序配置" data-label="遥控模式"></div><div class="subsystem-toggle-pills"></div></div>
+        <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>各子系统独立管理硬件，由统一指令调度器协调自动与遥控任务</li><li>自动模式由状态估计、路径规划与运动控制共同完成自主导航</li><li>遥控模式采用场地导向控制，陀螺仪把驾驶员输入转换到场地坐标系</li><li>速度与加速度限制减少车轮打滑，让激烈驾驶下的底盘运动保持稳定</li><li>模块化结构便于赛季中维护代码并继续加入新算法</li></ul></div>
       </div></div></section>
 
+      <section class="bleed cream technical-section" id="localization">
+        <div class="technical-inner">
+          <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 08</div><h2 class="subsystem-title">状态估计与定位</h2><p class="subsystem-tagline">融合里程计、惯性测量与视觉观测，为自动路径和动态射击提供持续位姿</p></div>
+          <div class="technical-cards technical-cards-3">
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/sensors.webp" alt="Pigeon 2.0、CANcoder 与 Limelight 4 传感器"><span class="tech-index">传感器</span><h3>三类观测源</h3><p>Pigeon 2.0 提供角速度、线性加速度与姿态；四个 CANcoder 通过 Phoenix 里程计线程以 150 Hz（CAN FD）同步采样；两台 Limelight 4 搭载 Hailo-8，提供最高 48 TOPS 算力，并使用 MegaTag2 输出带时间戳的全局位姿。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/kalman.webp" alt="卡尔曼滤波预测与更新循环"><span class="tech-index">融合</span><h3>卡尔曼滤波</h3><p>系统先用运动模型预测当前状态及不确定性，再计算新测量与预测之间的残差，通过卡尔曼增益完成更新。可信观测影响更大，高噪声观测影响更小。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/confidence.webp" alt="视觉观测动态置信度调节"><span class="tech-index">质量控制</span><h3>动态置信度与拒绝门限</h3><p>炮塔 Limelight 的置信度随旋转速度提高而降低。无 AprilTag、单标签歧义大于 0.3、高度误差超过 0.75 m、位置越界或角速度超过 600°/s 的观测会被拒绝。</p><div class="tech-formula"><span>视觉观测置信度因子</span><strong>平均 MegaTag 距离<sup>1.2</sup> ÷ MegaTag 数量<sup>2</sup></strong></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bleed warm technical-section" id="autonomous-control">
+        <div class="technical-inner">
+          <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 09</div><h2 class="subsystem-title">自动程序与底盘控制</h2><p class="subsystem-tagline">从全局路线到 Bump 通过，把规划结果转化为稳定的底盘动作</p></div>
+          <div class="technical-cards technical-cards-3">
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/path-planning.webp" alt="PathPlanner 路径规划界面"><span class="tech-index">路径规划</span><h3>全局与局部路径</h3><p>PathPlanner 调用 LocalADStar，在 navgrid 场地网格上生成局部路线并交给全向底盘控制器。全局规划使用欧氏距离启发搜索离散路径点，在静态环境假设下寻找全局最优路径。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/pid-feedforward.webp" alt="PID 与前馈控制公式"><span class="tech-index">轨迹跟踪</span><h3>PID 与前馈控制</h3><p>控制器分别计算平移和旋转误差；当前路径控制的积分增益为零，主要使用比例控制与旋转微分控制。前馈按运动学模型预先补偿，降低滞后、振荡与过冲风险。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/auto-bump.webp" alt="自动通过 Bump 的俯仰阶段"><span class="tech-index">自动过 Bump</span><h3>姿态驱动的阶段判断</h3><p>机器人依据当前位姿选择最近的 Bump 通道，以稳定速度通过，并持续用陀螺仪检测 pitch 轴。恢复水平后结束程序；该流程可由操作手触发，也用于多条自动指令。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bleed cream technical-section" id="systems-control">
+        <div class="technical-inner">
+          <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 10</div><h2 class="subsystem-title">电源与状态反馈</h2><p class="subsystem-tagline">在 18 台电机的整机负载下维持供电稳定，并把关键状态直接反馈给操作手</p></div>
+          <div class="technical-cards technical-cards-2">
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/current-limiting.webp" alt="动态底盘电流限制程序"><span class="tech-index">动态电流限制</span><h3>按电压保护双炮塔供电</h3><p>自动阶段或电压高于 10.5 V 时，底盘限制为 80 A；遥控阶段 7.5–10.5 V 时降至 40 A；低于 7.5 V 时降至 20 A。电压恢复后以每 20 ms 增加 1 A 的速率平滑回升。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/led-board.webp" alt="8×8 LED 灯板图标与实机显示"><span class="tech-index">LED 灯板</span><h3>状态优先级反馈</h3><p>8×8 灯板常态显示 Powerhouse 图标；飞轮启动后由天蓝过渡到橙红，比赛末段切换为粉色。灯光子系统按状态优先级统一更新，并保留俄罗斯方块与贪吃蛇功能。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bleed warm technical-section" id="turret-algorithms">
+        <div class="technical-inner">
+          <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 11</div><h2 class="subsystem-title">双炮塔算法</h2><p class="subsystem-tagline">从实测查表到运动补偿，让两套炮塔在机器人移动时持续更新各自的射击解</p></div>
+          <div class="algorithm-flow reveal" aria-label="动态射击解算流程"><span>目标距离</span><i>→</i><span>查表与插值</span><i>→</i><span>飞行时间</span><i>→</i><span>预测发射位置</span><i>→</i><span>20 轮迭代</span><i>→</i><span>就绪判定</span></div>
+          <div class="technical-cards technical-cards-3">
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/shot-table.webp" alt="距离、Hood 角度与飞轮速度实测表"><span class="tech-index">基础参数</span><h3>查表与插值</h3><p>不同距离的最佳飞轮速度、Hood 角度和飞行时间来自实测标定。程序在相邻测试点之间插值，避免参数跳变，并把飞行时间送入动态解算器。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/software-dynamic-solver.webp" alt="动态射击解算器流程"><span class="tech-index">动态解算</span><h3>预测未来发射位置</h3><p>机器人移动时，算法预测 FUEL 飞行期间的有效发射位置，再重新计算炮塔方向、Hood 角度和飞轮速度，而不是只从当前位姿直接瞄准。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/iterative-solver.webp" alt="动态射击迭代求解流程"><span class="tech-index">迭代</span><h3>20 轮耦合求解</h3><p>飞行时间依赖目标距离，机器人位移又会改变目标距离。程序反复估算飞行时间、预测位移并更新距离，共执行 20 轮，以最后一轮结果形成动态射击参数。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/motion-compensation.webp" alt="动态射击运动补偿示意图"><span class="tech-index">运动补偿</span><h3>平移与旋转同时修正</h3><p>算法合并场地坐标系下的底盘平移速度，以及炮塔偏移量与底盘角速度产生的附加线速度，得到真实发射点速度并预测位移。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/software-shot-readiness.webp" alt="炮塔发射就绪判定"><span class="tech-index">发射门控</span><h3>机构就绪才放行 FUEL</h3><p>驾驶员持续按下射击键且至少一侧飞轮达到目标速度后，两侧 feeder 与 Indexer 才开始供料。Hood 和炮塔持续跟踪并记录到位状态，条件不足时不会发射。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/dynamic-passing.webp" alt="双炮塔动态传球落点规划"><span class="tech-index">动态传球</span><h3>独立落点与通道选择</h3><p>对方 Alliance Shift 期间，机器人从 Neutral Zone 收集 FUEL 并传回己方区域。两套炮塔使用独立传球落点；位于场地中央时分别瞄准两侧，避免轨迹穿过 Hub。</p></article>
+          </div>
+        </div>
+      </section>
+
       <section class="bleed cream" id="design-view"><div class="subsystem"><div class="subsystem-showcase">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">设计视图 · 07</div><h2 class="subsystem-title">线稿与最终设计</h2><p class="subsystem-tagline">同一角度、同一构图下，对照 NEXUS 的工程线稿与最终渲染。</p></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">设计视图 · 12</div><h2 class="subsystem-title">线稿与最终设计</h2><p class="subsystem-tagline">同一角度、同一构图下，对照 NEXUS 的工程线稿与最终渲染</p></div>
         <div class="subsystem-figure reveal"><div class="cad-compare" data-compare style="--split:50%"><img class="cad-compare-base" src="binder_assets/10479/nexus-render-square.webp" alt="NEXUS 最终渲染"><div class="cad-compare-overlay"><img src="binder_assets/10479/nexus-sketch-square.webp" alt="NEXUS 工程线稿"></div><div class="cad-compare-handle" aria-hidden="true"><span></span></div><input class="cad-compare-range" type="range" min="0" max="100" value="50" aria-label="对比 NEXUS 工程线稿与最终渲染"></div></div>
         <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>线稿视图保留装配边界、孔位与机构关系</li><li>最终渲染展示材料、结构层级与整机集成</li><li>两种视图使用完全一致的相机角度与像素级对齐构图</li></ul></div>
       </div></div></section>
 
       <section class="bleed warm" id="simulator"><div class="subsystem web-tools-section">
-        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">模拟 · 08</div><h2 class="subsystem-title">Powerhouse Simulator</h2><p class="subsystem-tagline">把真实场地 CAD、NEXUS 整机模型与机器人代码放进同一套模拟测试流程。</p></div>
+        <div class="subsystem-head reveal"><div class="subsystem-eyebrow">模拟 · 13</div><h2 class="subsystem-title">Powerhouse Simulator</h2><p class="subsystem-tagline">把真实场地 CAD、NEXUS 整机模型与机器人代码放进同一套模拟测试流程</p></div>
         <div class="web-tools reveal"><div class="web-bento-grid">
-          <article class="web-bento-card web-bento-card-large"><img src="binder_assets/10479/simulator.webp" alt="Powerhouse Simulator 整场模拟界面"><div class="web-bento-copy"><h3>整场模拟</h3><p>使用真实场地 CAD 与 NEXUS 的 .glb 模型，在比赛场景中验证物理、视觉与机器人行为。</p></div></article>
+          <article class="web-bento-card web-bento-card-large"><img src="binder_assets/10479/simulator-overview.png" alt="Powerhouse Simulator 整场模拟界面"><div class="web-bento-copy"><h3>整场模拟</h3><p>使用真实场地 CAD 与 NEXUS 的 .glb 模型，在比赛场景中验证物理、视觉与机器人行为。</p></div></article>
           <article class="web-bento-card web-bento-card-tall"><img src="binder_assets/10479/glb-viewer.webp" alt="NEXUS GLB Viewer 模型检查界面"><div class="web-bento-copy"><h3>整机 GLB</h3><p>当前模型包含 1,436 个 meshes 与 17,697,545 个 triangles；原始文件为 748.5 MB。</p></div></article>
           <article class="web-bento-card web-bento-card-wide"><img src="binder_assets/10479/simulator-field.webp" alt="Powerhouse Simulator 顶视场地"><div class="web-bento-copy"><h3>场地与 FUEL</h3><p>整场场地、FUEL 分布与 NEXUS 位置进入同一测试环境，支持状态估计与路径行为验证。</p></div></article>
           <article class="web-bento-card"><img src="binder_assets/10479/shooter.webp" alt="NEXUS 双炮塔"><div class="web-bento-copy"><h3>动态射击</h3><p>求解器结合目标距离、飞行时间、机器人速度与炮塔偏移，持续更新射击解。</p></div></article>

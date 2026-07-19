@@ -38,6 +38,13 @@ test("packages the complete installable Team 10479 binder", async () => {
   const html = await readFile(new URL("index.html", publicRoot), "utf8");
 
   assert.match(html, /id="robot-3d"/);
+  assert.match(html, /id="strategy"/);
+  assert.match(html, /id="localization"/);
+  assert.match(html, /id="autonomous-control"/);
+  assert.match(html, /id="systems-control"/);
+  assert.match(html, /id="turret-algorithms"/);
+  assert.match(html, /20 轮耦合求解/);
+  assert.doesNotMatch(html, /爬升机构|攀爬机构/);
   assert.match(html, /Powerhouse Simulator/);
   assert.match(html, /PowerScout/);
   assert.match(html, /扫码查看技术手册/);
@@ -47,6 +54,9 @@ test("packages the complete installable Team 10479 binder", async () => {
 
   await Promise.all([
     access(new URL("binder_assets/10479/site-qr.png", publicRoot)),
+    access(new URL("binder_assets/10479/binder-diagrams/kalman.webp", publicRoot)),
+    access(new URL("binder_assets/10479/binder-diagrams/dynamic-passing.webp", publicRoot)),
+    access(new URL("binder_assets/10479/simulator-overview.png", publicRoot)),
     access(new URL("binder_assets/10479/3d/nexus-web.glb", publicRoot)),
     access(new URL("assets/10479-3d-viewer.bundle.js", publicRoot)),
     access(new URL("manifest.webmanifest", publicRoot)),

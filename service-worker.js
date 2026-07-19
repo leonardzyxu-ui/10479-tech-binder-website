@@ -1,4 +1,4 @@
-const CACHE_NAME = "team10479-nexus-v6";
+const CACHE_NAME = "team10479-nexus-v7";
 
 const PRECACHE = [
   "./index.html",
@@ -37,10 +37,26 @@ const PRECACHE = [
   "./binder_assets/10479/robot-hero.webp",
   "./binder_assets/10479/shooter.webp",
   "./binder_assets/10479/simulator-field.webp",
+  "./binder_assets/10479/simulator-overview.png",
   "./binder_assets/10479/simulator.webp",
   "./binder_assets/10479/site-qr.png",
   "./binder_assets/10479/software-dynamic-solver.webp",
   "./binder_assets/10479/software-shot-readiness.webp",
+  "./binder_assets/10479/binder-diagrams/architecture.webp",
+  "./binder_assets/10479/binder-diagrams/auto-bump.webp",
+  "./binder_assets/10479/binder-diagrams/autonomous.webp",
+  "./binder_assets/10479/binder-diagrams/confidence.webp",
+  "./binder_assets/10479/binder-diagrams/current-limiting.webp",
+  "./binder_assets/10479/binder-diagrams/dynamic-passing.webp",
+  "./binder_assets/10479/binder-diagrams/iterative-solver.webp",
+  "./binder_assets/10479/binder-diagrams/kalman.webp",
+  "./binder_assets/10479/binder-diagrams/led-board.webp",
+  "./binder_assets/10479/binder-diagrams/motion-compensation.webp",
+  "./binder_assets/10479/binder-diagrams/path-planning.webp",
+  "./binder_assets/10479/binder-diagrams/pid-feedforward.webp",
+  "./binder_assets/10479/binder-diagrams/sensors.webp",
+  "./binder_assets/10479/binder-diagrams/shot-table.webp",
+  "./binder_assets/10479/binder-diagrams/teleop.webp",
   "./binder_assets/10479/swerve.webp",
   "./binder_assets/10479/team-logo.png"
 ];

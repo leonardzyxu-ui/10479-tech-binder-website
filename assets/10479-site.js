@@ -4,6 +4,40 @@
 
   const nav = select(".nav");
   const menu = select(".nav-menu-toggle");
+  const siteFullscreen = select("[data-site-fullscreen]");
+  const fullscreenRoot = document.documentElement;
+  const requestSiteFullscreen = fullscreenRoot.requestFullscreen?.bind(fullscreenRoot)
+    || fullscreenRoot.webkitRequestFullscreen?.bind(fullscreenRoot);
+  const exitSiteFullscreen = document.exitFullscreen?.bind(document)
+    || document.webkitExitFullscreen?.bind(document);
+  const getFullscreenElement = () => document.fullscreenElement || document.webkitFullscreenElement;
+  const updateSiteFullscreen = () => {
+    if (!siteFullscreen) return;
+    const active = getFullscreenElement() === fullscreenRoot;
+    siteFullscreen.setAttribute("aria-pressed", String(active));
+    siteFullscreen.setAttribute("aria-label", active ? "退出全屏" : "全屏查看技术手册");
+    siteFullscreen.title = active ? "退出全屏" : "全屏";
+  };
+  if (siteFullscreen) {
+    if (!requestSiteFullscreen || !exitSiteFullscreen) {
+      siteFullscreen.hidden = true;
+    } else {
+      siteFullscreen.addEventListener("click", async () => {
+        try {
+          if (getFullscreenElement()) {
+            await exitSiteFullscreen();
+          } else {
+            await requestSiteFullscreen();
+          }
+        } catch {
+          siteFullscreen.hidden = true;
+        }
+      });
+      document.addEventListener("fullscreenchange", updateSiteFullscreen);
+      document.addEventListener("webkitfullscreenchange", updateSiteFullscreen);
+      updateSiteFullscreen();
+    }
+  }
   if (nav && menu) {
     const setOpen = (open) => {
       nav.classList.toggle("menu-open", open);
@@ -130,7 +164,7 @@
     lightbox.setAttribute("aria-hidden", "true");
     document.body.classList.remove("lightbox-open");
   };
-  selectAll("[data-lightbox-group] img, .web-bento-card img, .cad-compare img").forEach((image) => {
+  selectAll("[data-lightbox-group] img, .web-bento-card img, .cad-compare img, .technical-card img").forEach((image) => {
     image.addEventListener("click", () => {
       const group = image.closest("[data-lightbox-group]");
       openLightbox(group ? select("img.active", group) || image : image);
