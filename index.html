@@ -80,15 +80,18 @@
             <button type="button" data-viewer-fullscreen aria-label="全屏查看 3D 模型" title="全屏" aria-pressed="false"><span aria-hidden="true">⛶</span></button>
           </div>
         </div>
-        <div class="nexus-viewer-stage" data-nexus-viewer data-model="binder_assets/10479/3d/nexus-web.glb">
-          <img class="nexus-viewer-poster" src="binder_assets/10479/robot-hero.webp" alt="" aria-hidden="true">
-          <canvas aria-label="NEXUS 交互式 3D 整机模型" tabindex="0"></canvas>
-          <div class="nexus-viewer-loading" role="status" aria-live="polite">
-            <span class="nexus-viewer-loading-label">正在加载 NEXUS 3D</span>
-            <span class="nexus-viewer-progress" aria-hidden="true"><span></span></span>
-            <span class="nexus-viewer-percent">0%</span>
+        <div class="nexus-viewer-surface">
+          <div class="nexus-viewer-scroll-lane" aria-hidden="true"></div>
+          <div class="nexus-viewer-stage" data-nexus-viewer data-model="binder_assets/10479/3d/nexus-web.glb">
+            <img class="nexus-viewer-poster" src="binder_assets/10479/robot-hero.webp" alt="" aria-hidden="true">
+            <canvas aria-label="NEXUS 交互式 3D 整机模型" tabindex="0"></canvas>
+            <div class="nexus-viewer-loading" role="status" aria-live="polite">
+              <span class="nexus-viewer-loading-label">正在加载 NEXUS 3D</span>
+              <span class="nexus-viewer-progress" aria-hidden="true"><span></span></span>
+              <span class="nexus-viewer-percent">0%</span>
+            </div>
+            <div class="nexus-viewer-fallback" hidden>无法启动 3D 视图。</div>
           </div>
-          <div class="nexus-viewer-fallback" hidden>无法启动 3D 视图。</div>
         </div>
       </section>
 

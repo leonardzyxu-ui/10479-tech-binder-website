@@ -163,13 +163,31 @@ body.binder-localized {
   outline: none;
 }
 
-.nexus-viewer-stage {
-  position: relative;
+.nexus-viewer-surface {
   flex: 1 1 auto;
-  width: calc(100% - clamp(48px, 6vw, 112px));
-  margin-inline: auto;
+  display: grid;
+  grid-template-columns: clamp(56px, 6vw, 96px) minmax(0, 1fr);
+  width: 100%;
   min-height: 560px;
   height: min(76vh, 900px);
+  background: var(--mint);
+}
+
+.nexus-viewer-scroll-lane {
+  position: relative;
+  z-index: 5;
+  min-width: 0;
+  background: #fff;
+  border-right: 1px solid rgba(9, 74, 88, 0.1);
+  touch-action: pan-y;
+  overscroll-behavior-y: auto;
+}
+
+.nexus-viewer-stage {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
   overflow: hidden;
   background: var(--mint);
 }
@@ -276,10 +294,15 @@ body.binder-localized {
   margin-bottom: 14px;
 }
 
-.nexus-viewer-section:fullscreen .nexus-viewer-stage {
+.nexus-viewer-section:fullscreen .nexus-viewer-surface {
+  grid-template-columns: 1fr;
   width: 100%;
   height: auto;
   min-height: 0;
+}
+
+.nexus-viewer-section:fullscreen .nexus-viewer-scroll-lane {
+  display: none;
 }
 
 .binder-localized .hero-stage-inner {
@@ -621,7 +644,8 @@ body.binder-localized {
     font-size: 16px;
   }
 
-  .nexus-viewer-stage {
+  .nexus-viewer-surface {
+    grid-template-columns: clamp(48px, 12vw, 64px) minmax(0, 1fr);
     min-height: 520px;
     height: 68vh;
   }
