@@ -1,6 +1,6 @@
-import * as THREE from "three";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import * as THREE from "./vendor/three/three.module.min.js";
+import { OrbitControls } from "./vendor/three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "./vendor/three/addons/loaders/GLTFLoader.js";
 import { MeshoptDecoder } from "./vendor/three/libs/meshopt_decoder.module.js";
 
 async function initNexusViewer() {
@@ -221,22 +221,36 @@ if (host) {
         fullscreenButton.title = "此浏览器不允许全屏";
       }
     });
-    document.addEventListener("fullscreenchange", () => {
-      const active = document.fullscreenElement === section;
+    const getFullscreenElement = () => document.fullscreenElement || document.webkitFullscreenElement;
+    const updateFullscreenButton = () => {
+      const active = getFullscreenElement() === section;
       fullscreenButton?.setAttribute("aria-pressed", String(active));
       fullscreenButton?.setAttribute("aria-label", active ? "退出全屏" : "全屏查看 3D 模型");
-    });
+    };
+    document.addEventListener("fullscreenchange", updateFullscreenButton);
+    document.addEventListener("webkitfullscreenchange", updateFullscreenButton);
 
-    new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-    }, { rootMargin: "160px" }).observe(host);
-
-    renderer.setAnimationLoop(() => {
-      if (!visible && !document.fullscreenElement) return;
+    let animationLoopRunning = false;
+    const renderFrame = () => {
       if (reducedMotion.matches) controls.autoRotate = false;
       controls.update();
       renderer.render(scene, camera);
-    });
+    };
+    const shouldRender = () => visible || getFullscreenElement() === section;
+    const syncAnimationLoop = () => {
+      const shouldRun = shouldRender();
+      if (shouldRun === animationLoopRunning) return;
+      animationLoopRunning = shouldRun;
+      renderer.setAnimationLoop(shouldRun ? renderFrame : null);
+    };
+
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      syncAnimationLoop();
+    }, { rootMargin: "160px" }).observe(host);
+    document.addEventListener("fullscreenchange", syncAnimationLoop);
+    document.addEventListener("webkitfullscreenchange", syncAnimationLoop);
+    syncAnimationLoop();
 
     canvas.addEventListener("webglcontextlost", (event) => {
       event.preventDefault();

@@ -125,6 +125,26 @@ const removeServiceWorkerRegistration = html => html.replace(
   "<script>/* Single-file iPad edition: no service worker or server required. */</script>"
 );
 
+const markStandaloneDocument = html => html.replace(/<html\b([^>]*)>/i, (tag, attributes) => {
+  const classMatch = attributes.match(/\bclass=["']([^"']*)["']/i);
+  if (!classMatch) return `<html${attributes} class="offline-single-file">`;
+  return tag.replace(classMatch[0], `class="${classMatch[1]} offline-single-file"`);
+});
+
+const deferBelowFoldImages = html => {
+  const marker = '<section class="bleed cream" id="contents">';
+  const markerIndex = html.indexOf(marker);
+  if (markerIndex < 0) throw new Error("Missing contents marker for standalone image optimization.");
+  const before = html.slice(0, markerIndex);
+  const after = html.slice(markerIndex).replace(/<img\b[^>]*>/gi, (tag) => {
+    let optimized = tag;
+    if (!/\bloading=/i.test(optimized)) optimized = optimized.replace(/^<img\b/i, '<img loading="lazy"');
+    if (!/\bdecoding=/i.test(optimized)) optimized = optimized.replace(/^<img\b/i, '<img decoding="async"');
+    return optimized;
+  });
+  return before + after;
+};
+
 const validateStandalone = html => {
   const forbidden = [
     /<link\b[^>]*\brel=["']stylesheet["']/i,
@@ -148,6 +168,9 @@ const validateStandalone = html => {
     "data-nexus-viewer",
     "NEXUS 3D",
     "viewport-fit=cover",
+    "offline-single-file",
+    'loading="lazy"',
+    'decoding="async"',
     "data-offline-source=\"assets/10479-3d-viewer.bundle.js\""
   ]) {
     if (!html.includes(required)) throw new Error(`Standalone validation missing: ${required}`);
@@ -155,6 +178,8 @@ const validateStandalone = html => {
 };
 
 let html = await readFile(sourcePath, "utf8");
+html = markStandaloneDocument(html);
+html = deferBelowFoldImages(html);
 html = html.replace(
   /<meta\s+name=["']viewport["'][^>]*>/i,
   '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">'
