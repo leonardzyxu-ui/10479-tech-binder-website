@@ -87,6 +87,7 @@ body.binder-localized {
 .binder-localized .footer {
   background: #ffffff;
   border-top-color: var(--rule);
+  padding: 64px 0 72px;
 }
 
 .binder-localized .footer-team-logo {
@@ -433,34 +434,39 @@ body.binder-localized {
 .binder-localized .footer-qr {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
+  padding: 22px 24px;
+  border: 2px solid var(--teal);
+  border-radius: 8px;
+  background: var(--cream-2);
   color: inherit;
   text-decoration: none;
 }
 
 .binder-localized .footer-qr span {
   display: grid;
-  gap: 4px;
+  gap: 6px;
   text-align: right;
 }
 
 .binder-localized .footer-qr strong {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0;
 }
 
 .binder-localized .footer-qr small {
-  font-size: 10px;
-  opacity: 0.64;
+  font-size: 12px;
+  opacity: 0.72;
   letter-spacing: 0;
 }
 
 .binder-localized .footer-qr img {
-  width: 92px;
-  height: 92px;
-  padding: 7px;
+  flex: 0 0 196px;
+  width: 196px;
+  height: 196px;
+  padding: 10px;
   background: #fff;
   object-fit: contain;
 }
@@ -491,32 +497,42 @@ body.binder-localized {
 }
 
 @media (max-width: 720px) {
+  .binder-localized .footer {
+    padding: 48px 0 56px;
+  }
+
   .binder-localized .footer-inner {
     width: min(100% - 36px, 1500px);
-    align-items: flex-end;
-    gap: 18px;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
   }
 
   .binder-localized .footer-qr {
-    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px 18px 24px;
   }
 
   .binder-localized .footer-qr span {
-    max-width: 118px;
+    max-width: none;
+    text-align: center;
   }
 
   .binder-localized .footer-qr strong {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .binder-localized .footer-qr small {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .binder-localized .footer-qr img {
-    width: 76px;
-    height: 76px;
-    padding: 6px;
+    flex-basis: 188px;
+    width: 188px;
+    height: 188px;
+    padding: 9px;
   }
 
   .binder-localized .hero-stage-images img {
