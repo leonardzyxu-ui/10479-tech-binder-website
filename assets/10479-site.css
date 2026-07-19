@@ -462,6 +462,16 @@ body.binder-localized {
   letter-spacing: 0;
 }
 
+.binder-localized .footer-qr .footer-qr-url {
+  max-width: 190px;
+  color: var(--teal-darkest);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+  opacity: 1;
+  overflow-wrap: anywhere;
+}
+
 .binder-localized .footer-qr img {
   flex: 0 0 196px;
   width: 196px;
@@ -526,6 +536,11 @@ body.binder-localized {
 
   .binder-localized .footer-qr small {
     font-size: 11px;
+  }
+
+  .binder-localized .footer-qr .footer-qr-url {
+    max-width: 100%;
+    font-size: 10px;
   }
 
   .binder-localized .footer-qr img {
