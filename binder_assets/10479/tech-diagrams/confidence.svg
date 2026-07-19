@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">动态置信度与拒绝门限</title>
+  <desc id="description">质量先过门，再进入加权融合</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52ad32"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18321a" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f8f3"/>
+  <rect x="54" y="46" width="1092" height="628" rx="28" fill="#ffffff" stroke="#bfd4b7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="92" y="112" text-anchor="start" font-size="34" font-weight="700" fill="#102018"><tspan x="92" dy="0">动态置信度与拒绝门限</tspan></text>
+  <text x="92" y="150" text-anchor="start" font-size="18" font-weight="500" fill="#58665e"><tspan x="92" dy="0">质量先过门，再进入加权融合</tspan></text>
+  <path d="M92 178 H1108" stroke="#bfd4b7" stroke-width="2"/>
+  
+  <g><rect x="92" y="224" width="310" height="100" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="247" y="264" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="247" dy="0">视觉观测</tspan><tspan x="247" dy="28">distance · tag count</tspan></text></g>
+  <path d="M 402 274 L 472 274" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <g><rect x="472" y="224" width="322" height="100" rx="18" fill="#e7f3e2" stroke="#52ad32" stroke-width="2"/><text x="633" y="264" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="633" dy="0">置信度因子</tspan><tspan x="633" dy="28">distance¹·² ÷ tags²</tspan></text></g>
+  <path d="M 794 274 L 864 274" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <g><rect x="864" y="224" width="244" height="100" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="986" y="264" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="986" dy="0">加权更新</tspan><tspan x="986" dy="28">PoseEstimator</tspan></text></g>
+  <rect x="92" y="382" width="1016" height="170" rx="20" fill="#f5f8f3" stroke="#bfd4b7" stroke-width="2"/>
+  <text x="126" y="430" text-anchor="start" font-size="22" font-weight="700" fill="#c95a4a"><tspan x="126" dy="0">直接拒绝</tspan></text>
+  <text x="352" y="446" text-anchor="middle" font-size="20" font-weight="600" fill="#102018"><tspan x="352" dy="0">无 AprilTag</tspan><tspan x="352" dy="34">单标签歧义 &gt; 0.3</tspan></text>
+  <text x="684" y="446" text-anchor="middle" font-size="20" font-weight="600" fill="#102018"><tspan x="684" dy="0">高度误差 &gt; 0.75 m</tspan><tspan x="684" dy="34">位置超出场地边界</tspan></text>
+  <text x="985" y="446" text-anchor="middle" font-size="20" font-weight="600" fill="#102018"><tspan x="985" dy="0">角速度 &gt; 600°/s</tspan><tspan x="985" dy="34">炮塔转速升高则降权</tspan></text>
+  <text x="600" y="611" text-anchor="middle" font-size="19" font-weight="600" fill="#2c7624"><tspan x="600" dy="0">低质量观测不会突然拖动整机位姿</tspan></text>
+
+</svg>

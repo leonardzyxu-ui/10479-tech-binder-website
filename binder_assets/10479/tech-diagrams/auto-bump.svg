@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">自动过 Bump</title>
+  <desc id="description">位姿选通道，pitch 判断阶段，恢复水平后结束</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52ad32"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18321a" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f8f3"/>
+  <rect x="54" y="46" width="1092" height="628" rx="28" fill="#ffffff" stroke="#bfd4b7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="92" y="112" text-anchor="start" font-size="34" font-weight="700" fill="#102018"><tspan x="92" dy="0">自动过 Bump</tspan></text>
+  <text x="92" y="150" text-anchor="start" font-size="18" font-weight="500" fill="#58665e"><tspan x="92" dy="0">位姿选通道，pitch 判断阶段，恢复水平后结束</tspan></text>
+  <path d="M92 178 H1108" stroke="#bfd4b7" stroke-width="2"/>
+  
+  <path d="M102 482 H270 L370 340 H768 L870 482 H1098" fill="none" stroke="#102018" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M130 292 H1060" stroke="#52ad32" stroke-width="5" marker-end="url(#arrow)"/>
+  <g transform="translate(190 458) rotate(0)"><rect x="-54" y="-26" width="108" height="52" rx="12" fill="#e7f3e2" stroke="#2c7624" stroke-width="3"/><circle cx="-34" cy="27" r="11" fill="#102018"/><circle cx="34" cy="27" r="11" fill="#102018"/></g><text x="190" y="560" text-anchor="middle" font-size="18" font-weight="600" fill="#58665e"><tspan x="190" dy="0">对准</tspan></text><g transform="translate(340 362) rotate(-20)"><rect x="-54" y="-26" width="108" height="52" rx="12" fill="#e7f3e2" stroke="#2c7624" stroke-width="3"/><circle cx="-34" cy="27" r="11" fill="#102018"/><circle cx="34" cy="27" r="11" fill="#102018"/></g><text x="340" y="560" text-anchor="middle" font-size="18" font-weight="600" fill="#58665e"><tspan x="340" dy="0">上坡</tspan></text><g transform="translate(570 316) rotate(0)"><rect x="-54" y="-26" width="108" height="52" rx="12" fill="#e7f3e2" stroke="#2c7624" stroke-width="3"/><circle cx="-34" cy="27" r="11" fill="#102018"/><circle cx="34" cy="27" r="11" fill="#102018"/></g><text x="570" y="560" text-anchor="middle" font-size="18" font-weight="600" fill="#58665e"><tspan x="570" dy="0">坡顶</tspan></text><g transform="translate(808 362) rotate(20)"><rect x="-54" y="-26" width="108" height="52" rx="12" fill="#e7f3e2" stroke="#2c7624" stroke-width="3"/><circle cx="-34" cy="27" r="11" fill="#102018"/><circle cx="34" cy="27" r="11" fill="#102018"/></g><text x="808" y="560" text-anchor="middle" font-size="18" font-weight="600" fill="#58665e"><tspan x="808" dy="0">下坡</tspan></text><g transform="translate(1000 458) rotate(0)"><rect x="-54" y="-26" width="108" height="52" rx="12" fill="#e7f3e2" stroke="#2c7624" stroke-width="3"/><circle cx="-34" cy="27" r="11" fill="#102018"/><circle cx="34" cy="27" r="11" fill="#102018"/></g><text x="1000" y="560" text-anchor="middle" font-size="18" font-weight="600" fill="#2c7624"><tspan x="1000" dy="0">水平结束</tspan></text>
+
+</svg>

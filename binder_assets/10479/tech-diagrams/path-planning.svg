@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">全局与局部路径规划</title>
+  <desc id="description">启发搜索给出路线，LocalADStar 在 navgrid 上持续生成可行路径</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52ad32"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18321a" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f8f3"/>
+  <rect x="54" y="46" width="1092" height="628" rx="28" fill="#ffffff" stroke="#bfd4b7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="92" y="112" text-anchor="start" font-size="34" font-weight="700" fill="#102018"><tspan x="92" dy="0">全局与局部路径规划</tspan></text>
+  <text x="92" y="150" text-anchor="start" font-size="18" font-weight="500" fill="#58665e"><tspan x="92" dy="0">启发搜索给出路线，LocalADStar 在 navgrid 上持续生成可行路径</tspan></text>
+  <path d="M92 178 H1108" stroke="#bfd4b7" stroke-width="2"/>
+  
+  <rect x="92" y="218" width="474" height="350" rx="22" fill="#f5f8f3" stroke="#bfd4b7" stroke-width="2"/>
+  <rect x="634" y="218" width="474" height="350" rx="22" fill="#f5f8f3" stroke="#bfd4b7" stroke-width="2"/>
+  <text x="126" y="264" text-anchor="start" font-size="24" font-weight="700" fill="#102018"><tspan x="126" dy="0">全局规划</tspan></text><text x="668" y="264" text-anchor="start" font-size="24" font-weight="700" fill="#102018"><tspan x="668" dy="0">局部规划</tspan></text>
+  <path d="M148 504 C230 454 226 330 342 350 S430 438 518 298" fill="none" stroke="#2f7295" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="148" cy="504" r="10" fill="#52ad32"/><circle cx="222" cy="450" r="10" fill="#52ad32"/><circle cx="342" cy="350" r="10" fill="#52ad32"/><circle cx="430" cy="421" r="10" fill="#52ad32"/><circle cx="518" cy="298" r="10" fill="#efad00"/>
+  <g stroke="#bfd4b7" stroke-width="1"><path d="M672 302 V526"/><path d="M724 302 V526"/><path d="M776 302 V526"/><path d="M828 302 V526"/><path d="M880 302 V526"/><path d="M932 302 V526"/><path d="M984 302 V526"/><path d="M1036 302 V526"/><path d="M668 306 H1070"/><path d="M668 358 H1070"/><path d="M668 410 H1070"/><path d="M668 462 H1070"/><path d="M668 514 H1070"/></g>
+  <path d="M694 492 C758 466 784 358 872 390 S986 450 1058 318" fill="none" stroke="#52ad32" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="694" cy="492" r="11" fill="#52ad32"/><circle cx="1058" cy="318" r="11" fill="#efad00"/>
+  <text x="329" y="617" text-anchor="middle" font-size="18" font-weight="600" fill="#58665e"><tspan x="329" dy="0">离散路径点 · 欧氏距离启发</tspan></text><text x="871" y="617" text-anchor="middle" font-size="18" font-weight="600" fill="#58665e"><tspan x="871" dy="0">当前位姿到临时目标</tspan></text>
+
+</svg>

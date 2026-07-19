@@ -54,8 +54,8 @@ test("packages the complete installable Team 10479 binder", async () => {
 
   await Promise.all([
     access(new URL("binder_assets/10479/site-qr.png", publicRoot)),
-    access(new URL("binder_assets/10479/binder-diagrams/kalman.webp", publicRoot)),
-    access(new URL("binder_assets/10479/binder-diagrams/dynamic-passing.webp", publicRoot)),
+    access(new URL("binder_assets/10479/tech-diagrams/kalman.svg", publicRoot)),
+    access(new URL("binder_assets/10479/tech-diagrams/dynamic-passing.svg", publicRoot)),
     access(new URL("binder_assets/10479/simulator-overview.png", publicRoot)),
     access(new URL("binder_assets/10479/3d/nexus-web.glb", publicRoot)),
     access(new URL("assets/10479-3d-viewer.bundle.js", publicRoot)),

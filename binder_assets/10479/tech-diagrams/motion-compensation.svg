@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">运动补偿</title>
+  <desc id="description">平移速度与炮塔偏移产生的旋转附加速度同时修正</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52ad32"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18321a" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f8f3"/>
+  <rect x="54" y="46" width="1092" height="628" rx="28" fill="#ffffff" stroke="#bfd4b7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="92" y="112" text-anchor="start" font-size="34" font-weight="700" fill="#102018"><tspan x="92" dy="0">运动补偿</tspan></text>
+  <text x="92" y="150" text-anchor="start" font-size="18" font-weight="500" fill="#58665e"><tspan x="92" dy="0">平移速度与炮塔偏移产生的旋转附加速度同时修正</tspan></text>
+  <path d="M92 178 H1108" stroke="#bfd4b7" stroke-width="2"/>
+  <g><rect x="92" y="278" width="228.5" height="128" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="206.25" y="332" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="206.25" dy="0">底盘平移</tspan><tspan x="206.25" dy="28">场地坐标速度</tspan></text></g><path d="M 326.5 342 L 348.5 342" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/><g><rect x="354.5" y="278" width="228.5" height="128" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="468.75" y="332" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="468.75" dy="0">炮塔偏移 × ω</tspan><tspan x="468.75" dy="28">附加线速度</tspan></text></g><path d="M 589 342 L 611 342" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/><g><rect x="617" y="278" width="228.5" height="128" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="731.25" y="332" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="731.25" dy="0">真实发射点</tspan><tspan x="731.25" dy="28">速度</tspan></text></g><path d="M 851.5 342 L 873.5 342" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/><g><rect x="879.5" y="278" width="228.5" height="128" rx="18" fill="#e7f3e2" stroke="#52ad32" stroke-width="2"/><text x="993.75" y="332" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="993.75" dy="0">速度 × 飞行时间</tspan><tspan x="993.75" dy="28">预测位移</tspan></text></g><rect x="92" y="476" width="1016" height="118" rx="18" fill="#e7f3e2"/><text x="600" y="523" text-anchor="middle" font-size="20" font-weight="600" fill="#2c7624"><tspan x="600" dy="0">补偿后的瞄准方向指向 FUEL 抵达时的目标</tspan><tspan x="600" dy="29">而不是发射瞬间的静态目标</tspan></text>
+</svg>

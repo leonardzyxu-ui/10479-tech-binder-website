@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">三类观测源</title>
+  <desc id="description">Pigeon 2.0、CANcoder 与 Limelight 4 进入同一位姿估计链路</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52ad32"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18321a" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f8f3"/>
+  <rect x="54" y="46" width="1092" height="628" rx="28" fill="#ffffff" stroke="#bfd4b7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="92" y="112" text-anchor="start" font-size="34" font-weight="700" fill="#102018"><tspan x="92" dy="0">三类观测源</tspan></text>
+  <text x="92" y="150" text-anchor="start" font-size="18" font-weight="500" fill="#58665e"><tspan x="92" dy="0">Pigeon 2.0、CANcoder 与 Limelight 4 进入同一位姿估计链路</tspan></text>
+  <path d="M92 178 H1108" stroke="#bfd4b7" stroke-width="2"/>
+  
+  <g><rect x="92" y="232" width="250" height="142" rx="18" fill="#f5f8f3" stroke="#bfd4b7" stroke-width="2"/><text x="217" y="293" text-anchor="middle" font-size="22" font-weight="600" fill="#102018"><tspan x="217" dy="0">Pigeon 2.0</tspan><tspan x="217" dy="28">角速度 · 姿态</tspan></text></g>
+  <g><rect x="475" y="232" width="250" height="142" rx="18" fill="#f5f8f3" stroke="#bfd4b7" stroke-width="2"/><text x="600" y="293" text-anchor="middle" font-size="22" font-weight="600" fill="#102018"><tspan x="600" dy="0">4 × CANcoder</tspan><tspan x="600" dy="28">150 Hz 里程计</tspan></text></g>
+  <g><rect x="858" y="232" width="250" height="142" rx="18" fill="#f5f8f3" stroke="#bfd4b7" stroke-width="2"/><text x="983" y="293" text-anchor="middle" font-size="22" font-weight="600" fill="#102018"><tspan x="983" dy="0">2 × Limelight 4</tspan><tspan x="983" dy="28">MegaTag2 位姿</tspan></text></g>
+  <path d="M 217 374 L 493 480" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/><path d="M 600 374 L 600 462" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/><path d="M 983 374 L 707 480" fill="none" stroke="#52ad32" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <g><rect x="414" y="464" width="372" height="116" rx="18" fill="#e7f3e2" stroke="#52ad32" stroke-width="2"/><text x="600" y="512" text-anchor="middle" font-size="23" font-weight="600" fill="#102018"><tspan x="600" dy="0">PoseEstimator</tspan><tspan x="600" dy="28">预测 + 置信度加权更新</tspan></text></g>
+  <text x="600" y="626" text-anchor="middle" font-size="19" font-weight="600" fill="#2c7624"><tspan x="600" dy="0">局部里程计保持连续，视觉观测提供全局校正</tspan></text>
+
+</svg>

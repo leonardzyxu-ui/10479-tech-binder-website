@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">PID 与前馈控制</title>
+  <desc id="description">反馈修正剩余误差，前馈预补偿预期运动</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52ad32"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18321a" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f8f3"/>
+  <rect x="54" y="46" width="1092" height="628" rx="28" fill="#ffffff" stroke="#bfd4b7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="92" y="112" text-anchor="start" font-size="34" font-weight="700" fill="#102018"><tspan x="92" dy="0">PID 与前馈控制</tspan></text>
+  <text x="92" y="150" text-anchor="start" font-size="18" font-weight="500" fill="#58665e"><tspan x="92" dy="0">反馈修正剩余误差，前馈预补偿预期运动</tspan></text>
+  <path d="M92 178 H1108" stroke="#bfd4b7" stroke-width="2"/>
+  
+  <rect x="92" y="222" width="1016" height="126" rx="20" fill="#e7f3e2" stroke="#52ad32" stroke-width="2"/>
+  <text x="600" y="300" text-anchor="middle" font-size="30" font-weight="650" fill="#2c7624"><tspan x="600" dy="0">u(t) = Kp·e(t) + Ki·∫e(t)dt + Kd·de(t)/dt + feedforward</tspan></text>
+  <g><rect x="92" y="410" width="226" height="118" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="205" y="459" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="205" dy="0">P</tspan><tspan x="205" dy="28">响应当前误差</tspan></text></g><g><rect x="355" y="410" width="226" height="118" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="468" y="459" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="468" dy="0">I = 0</tspan><tspan x="468" dy="28">不累积路径偏差</tspan></text></g><g><rect x="618" y="410" width="226" height="118" rx="18" fill="#ffffff" stroke="#bfd4b7" stroke-width="2"/><text x="731" y="459" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="731" dy="0">D</tspan><tspan x="731" dy="28">抑制误差变化</tspan></text></g><g><rect x="881" y="410" width="227" height="118" rx="18" fill="#f5f8f3" stroke="#bfd4b7" stroke-width="2"/><text x="994.5" y="459" text-anchor="middle" font-size="21" font-weight="600" fill="#102018"><tspan x="994.5" dy="0">FF</tspan><tspan x="994.5" dy="28">运动学预补偿</tspan></text></g>
+  <text x="600" y="605" text-anchor="middle" font-size="19" font-weight="600" fill="#58665e"><tspan x="600" dy="0">平移与旋转控制器分别计算误差并输出修正量</tspan></text>
+
+</svg>

@@ -158,7 +158,7 @@
 
       <section class="bleed warm" id="software"><div class="subsystem"><div class="subsystem-showcase">
         <div class="subsystem-head reveal"><div class="subsystem-eyebrow">程序与算法 · 07</div><h2 class="subsystem-title">机器人控制系统</h2><p class="subsystem-tagline">模块化架构把底盘、炮塔、Indexer、Intake 与视觉系统纳入统一指令调度</p></div>
-        <div class="subsystem-figure reveal"><div class="subsystem-images" data-toggle data-lightbox-group><img class="active" src="binder_assets/10479/binder-diagrams/architecture.webp" alt="Tech Binder 模块化程序架构" data-label="系统架构"><img src="binder_assets/10479/binder-diagrams/autonomous.webp" alt="自动模式路径规划界面" data-label="自动模式"><img src="binder_assets/10479/binder-diagrams/teleop.webp" alt="遥控模式程序配置" data-label="遥控模式"></div><div class="subsystem-toggle-pills"></div></div>
+        <div class="subsystem-figure reveal"><div class="subsystem-images" data-toggle data-lightbox-group><img class="active" src="binder_assets/10479/tech-diagrams/architecture.svg" alt="Tech Binder 模块化程序架构" data-label="系统架构"><img src="binder_assets/10479/tech-diagrams/autonomous.svg" alt="自动模式路径规划界面" data-label="自动模式"><img src="binder_assets/10479/tech-diagrams/teleop.svg" alt="遥控模式程序配置" data-label="遥控模式"></div><div class="subsystem-toggle-pills"></div></div>
         <div class="features-block reveal"><p class="features-label">要点</p><ul class="feat"><li>各子系统独立管理硬件，由统一指令调度器协调自动与遥控任务</li><li>自动模式由状态估计、路径规划与运动控制共同完成自主导航</li><li>遥控模式采用场地导向控制，陀螺仪把驾驶员输入转换到场地坐标系</li><li>速度与加速度限制减少车轮打滑，让激烈驾驶下的底盘运动保持稳定</li><li>模块化结构便于赛季中维护代码并继续加入新算法</li></ul></div>
       </div></div></section>
 
@@ -166,9 +166,9 @@
         <div class="technical-inner">
           <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 08</div><h2 class="subsystem-title">状态估计与定位</h2><p class="subsystem-tagline">融合里程计、惯性测量与视觉观测，为自动路径和动态射击提供持续位姿</p></div>
           <div class="technical-cards technical-cards-3">
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/sensors.webp" alt="Pigeon 2.0、CANcoder 与 Limelight 4 传感器"><span class="tech-index">传感器</span><h3>三类观测源</h3><p>Pigeon 2.0 提供角速度、线性加速度与姿态；四个 CANcoder 通过 Phoenix 里程计线程以 150 Hz（CAN FD）同步采样；两台 Limelight 4 搭载 Hailo-8，提供最高 48 TOPS 算力，并使用 MegaTag2 输出带时间戳的全局位姿。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/kalman.webp" alt="卡尔曼滤波预测与更新循环"><span class="tech-index">融合</span><h3>卡尔曼滤波</h3><p>系统先用运动模型预测当前状态及不确定性，再计算新测量与预测之间的残差，通过卡尔曼增益完成更新。可信观测影响更大，高噪声观测影响更小。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/confidence.webp" alt="视觉观测动态置信度调节"><span class="tech-index">质量控制</span><h3>动态置信度与拒绝门限</h3><p>炮塔 Limelight 的置信度随旋转速度提高而降低。无 AprilTag、单标签歧义大于 0.3、高度误差超过 0.75 m、位置越界或角速度超过 600°/s 的观测会被拒绝。</p><div class="tech-formula"><span>视觉观测置信度因子</span><strong>平均 MegaTag 距离<sup>1.2</sup> ÷ MegaTag 数量<sup>2</sup></strong></div></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/sensors.svg" alt="Pigeon 2.0、CANcoder 与 Limelight 4 传感器"><span class="tech-index">传感器</span><h3>三类观测源</h3><p>Pigeon 2.0 提供角速度、线性加速度与姿态；四个 CANcoder 通过 Phoenix 里程计线程以 150 Hz（CAN FD）同步采样；两台 Limelight 4 搭载 Hailo-8，提供最高 48 TOPS 算力，并使用 MegaTag2 输出带时间戳的全局位姿。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/kalman.svg" alt="卡尔曼滤波预测与更新循环"><span class="tech-index">融合</span><h3>卡尔曼滤波</h3><p>系统先用运动模型预测当前状态及不确定性，再计算新测量与预测之间的残差，通过卡尔曼增益完成更新。可信观测影响更大，高噪声观测影响更小。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/confidence.svg" alt="视觉观测动态置信度调节"><span class="tech-index">质量控制</span><h3>动态置信度与拒绝门限</h3><p>炮塔 Limelight 的置信度随旋转速度提高而降低。无 AprilTag、单标签歧义大于 0.3、高度误差超过 0.75 m、位置越界或角速度超过 600°/s 的观测会被拒绝。</p><div class="tech-formula"><span>视觉观测置信度因子</span><strong>平均 MegaTag 距离<sup>1.2</sup> ÷ MegaTag 数量<sup>2</sup></strong></div></article>
           </div>
         </div>
       </section>
@@ -177,9 +177,9 @@
         <div class="technical-inner">
           <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 09</div><h2 class="subsystem-title">自动程序与底盘控制</h2><p class="subsystem-tagline">从全局路线到 Bump 通过，把规划结果转化为稳定的底盘动作</p></div>
           <div class="technical-cards technical-cards-3">
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/path-planning.webp" alt="PathPlanner 路径规划界面"><span class="tech-index">路径规划</span><h3>全局与局部路径</h3><p>PathPlanner 调用 LocalADStar，在 navgrid 场地网格上生成局部路线并交给全向底盘控制器。全局规划使用欧氏距离启发搜索离散路径点，在静态环境假设下寻找全局最优路径。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/pid-feedforward.webp" alt="PID 与前馈控制公式"><span class="tech-index">轨迹跟踪</span><h3>PID 与前馈控制</h3><p>控制器分别计算平移和旋转误差；当前路径控制的积分增益为零，主要使用比例控制与旋转微分控制。前馈按运动学模型预先补偿，降低滞后、振荡与过冲风险。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/auto-bump.webp" alt="自动通过 Bump 的俯仰阶段"><span class="tech-index">自动过 Bump</span><h3>姿态驱动的阶段判断</h3><p>机器人依据当前位姿选择最近的 Bump 通道，以稳定速度通过，并持续用陀螺仪检测 pitch 轴。恢复水平后结束程序；该流程可由操作手触发，也用于多条自动指令。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/path-planning.svg" alt="PathPlanner 路径规划界面"><span class="tech-index">路径规划</span><h3>全局与局部路径</h3><p>PathPlanner 调用 LocalADStar，在 navgrid 场地网格上生成局部路线并交给全向底盘控制器。全局规划使用欧氏距离启发搜索离散路径点，在静态环境假设下寻找全局最优路径。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/pid-feedforward.svg" alt="PID 与前馈控制公式"><span class="tech-index">轨迹跟踪</span><h3>PID 与前馈控制</h3><p>控制器分别计算平移和旋转误差；当前路径控制的积分增益为零，主要使用比例控制与旋转微分控制。前馈按运动学模型预先补偿，降低滞后、振荡与过冲风险。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/auto-bump.svg" alt="自动通过 Bump 的俯仰阶段"><span class="tech-index">自动过 Bump</span><h3>姿态驱动的阶段判断</h3><p>机器人依据当前位姿选择最近的 Bump 通道，以稳定速度通过，并持续用陀螺仪检测 pitch 轴。恢复水平后结束程序；该流程可由操作手触发，也用于多条自动指令。</p></article>
           </div>
         </div>
       </section>
@@ -188,8 +188,8 @@
         <div class="technical-inner">
           <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 10</div><h2 class="subsystem-title">电源与状态反馈</h2><p class="subsystem-tagline">在 18 台电机的整机负载下维持供电稳定，并把关键状态直接反馈给操作手</p></div>
           <div class="technical-cards technical-cards-2">
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/current-limiting.webp" alt="动态底盘电流限制程序"><span class="tech-index">动态电流限制</span><h3>按电压保护双炮塔供电</h3><p>自动阶段或电压高于 10.5 V 时，底盘限制为 80 A；遥控阶段 7.5–10.5 V 时降至 40 A；低于 7.5 V 时降至 20 A。电压恢复后以每 20 ms 增加 1 A 的速率平滑回升。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/led-board.webp" alt="8×8 LED 灯板图标与实机显示"><span class="tech-index">LED 灯板</span><h3>状态优先级反馈</h3><p>8×8 灯板常态显示 Powerhouse 图标；飞轮启动后由天蓝过渡到橙红，比赛末段切换为粉色。灯光子系统按状态优先级统一更新，并保留俄罗斯方块与贪吃蛇功能。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/current-limiting.svg" alt="动态底盘电流限制程序"><span class="tech-index">动态电流限制</span><h3>按电压保护双炮塔供电</h3><p>自动阶段或电压高于 10.5 V 时，底盘限制为 80 A；遥控阶段 7.5–10.5 V 时降至 40 A；低于 7.5 V 时降至 20 A。电压恢复后以每 20 ms 增加 1 A 的速率平滑回升。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/led-board.svg" alt="8×8 LED 灯板图标与实机显示"><span class="tech-index">LED 灯板</span><h3>状态优先级反馈</h3><p>8×8 灯板常态显示 Powerhouse 图标；飞轮启动后由天蓝过渡到橙红，比赛末段切换为粉色。灯光子系统按状态优先级统一更新，并保留俄罗斯方块与贪吃蛇功能。</p></article>
           </div>
         </div>
       </section>
@@ -199,12 +199,12 @@
           <div class="technical-head reveal"><div class="subsystem-eyebrow">程序与算法 · 11</div><h2 class="subsystem-title">双炮塔算法</h2><p class="subsystem-tagline">从实测查表到运动补偿，让两套炮塔在机器人移动时持续更新各自的射击解</p></div>
           <div class="algorithm-flow reveal" aria-label="动态射击解算流程"><span>目标距离</span><i>→</i><span>查表与插值</span><i>→</i><span>飞行时间</span><i>→</i><span>预测发射位置</span><i>→</i><span>20 轮迭代</span><i>→</i><span>就绪判定</span></div>
           <div class="technical-cards technical-cards-3">
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/shot-table.webp" alt="距离、Hood 角度与飞轮速度实测表"><span class="tech-index">基础参数</span><h3>查表与插值</h3><p>不同距离的最佳飞轮速度、Hood 角度和飞行时间来自实测标定。程序在相邻测试点之间插值，避免参数跳变，并把飞行时间送入动态解算器。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/software-dynamic-solver.webp" alt="动态射击解算器流程"><span class="tech-index">动态解算</span><h3>预测未来发射位置</h3><p>机器人移动时，算法预测 FUEL 飞行期间的有效发射位置，再重新计算炮塔方向、Hood 角度和飞轮速度，而不是只从当前位姿直接瞄准。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/iterative-solver.webp" alt="动态射击迭代求解流程"><span class="tech-index">迭代</span><h3>20 轮耦合求解</h3><p>飞行时间依赖目标距离，机器人位移又会改变目标距离。程序反复估算飞行时间、预测位移并更新距离，共执行 20 轮，以最后一轮结果形成动态射击参数。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/motion-compensation.webp" alt="动态射击运动补偿示意图"><span class="tech-index">运动补偿</span><h3>平移与旋转同时修正</h3><p>算法合并场地坐标系下的底盘平移速度，以及炮塔偏移量与底盘角速度产生的附加线速度，得到真实发射点速度并预测位移。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/software-shot-readiness.webp" alt="炮塔发射就绪判定"><span class="tech-index">发射门控</span><h3>机构就绪才放行 FUEL</h3><p>驾驶员持续按下射击键且至少一侧飞轮达到目标速度后，两侧 feeder 与 Indexer 才开始供料。Hood 和炮塔持续跟踪并记录到位状态，条件不足时不会发射。</p></article>
-            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/binder-diagrams/dynamic-passing.webp" alt="双炮塔动态传球落点规划"><span class="tech-index">动态传球</span><h3>独立落点与通道选择</h3><p>对方 Alliance Shift 期间，机器人从 Neutral Zone 收集 FUEL 并传回己方区域。两套炮塔使用独立传球落点；位于场地中央时分别瞄准两侧，避免轨迹穿过 Hub。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/shot-table.svg" alt="距离、Hood 角度与飞轮速度实测表"><span class="tech-index">基础参数</span><h3>查表与插值</h3><p>不同距离的最佳飞轮速度、Hood 角度和飞行时间来自实测标定。程序在相邻测试点之间插值，避免参数跳变，并把飞行时间送入动态解算器。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/dynamic-solver.svg" alt="动态射击解算器流程"><span class="tech-index">动态解算</span><h3>预测未来发射位置</h3><p>机器人移动时，算法预测 FUEL 飞行期间的有效发射位置，再重新计算炮塔方向、Hood 角度和飞轮速度，而不是只从当前位姿直接瞄准。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/iterative-solver.svg" alt="动态射击迭代求解流程"><span class="tech-index">迭代</span><h3>20 轮耦合求解</h3><p>飞行时间依赖目标距离，机器人位移又会改变目标距离。程序反复估算飞行时间、预测位移并更新距离，共执行 20 轮，以最后一轮结果形成动态射击参数。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/motion-compensation.svg" alt="动态射击运动补偿示意图"><span class="tech-index">运动补偿</span><h3>平移与旋转同时修正</h3><p>算法合并场地坐标系下的底盘平移速度，以及炮塔偏移量与底盘角速度产生的附加线速度，得到真实发射点速度并预测位移。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/shot-readiness.svg" alt="炮塔发射就绪判定"><span class="tech-index">发射门控</span><h3>机构就绪才放行 FUEL</h3><p>驾驶员持续按下射击键且至少一侧飞轮达到目标速度后，两侧 feeder 与 Indexer 才开始供料。Hood 和炮塔持续跟踪并记录到位状态，条件不足时不会发射。</p></article>
+            <article class="technical-card technical-card-visual reveal"><img src="binder_assets/10479/tech-diagrams/dynamic-passing.svg" alt="双炮塔动态传球落点规划"><span class="tech-index">动态传球</span><h3>独立落点与通道选择</h3><p>对方 Alliance Shift 期间，机器人从 Neutral Zone 收集 FUEL 并传回己方区域。两套炮塔使用独立传球落点；位于场地中央时分别瞄准两侧，避免轨迹穿过 Hub。</p></article>
           </div>
         </div>
       </section>
