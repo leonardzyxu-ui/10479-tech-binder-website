@@ -12,8 +12,30 @@ source_extract/
 team10479_assets/
 verification/
 ipad-offline/
+.playwright-cli/
+output/
+hosting/public/
+hosting/dist/
+hosting/.next/
+hosting/.wrangler/
+hosting/app/_sites-preview/
+offline-qa.html
+print.html
 
 # Unused leftovers from earlier local reconstruction attempts.
 assets/client-*.js
 assets/main--*.js
 assets/print-CN*.js
+assets/10479-hightide-content-patch.js
+assets/print-CZ*.css
+binder_assets/10479/binder-diagrams/
+binder_assets/10479/nexus-render-square.png
+binder_assets/10479/nexus-sketch-square.png
+binder_assets/10479/robot-side.webp
+binder_assets/10479/robot-transparent.webp
+binder_assets/10479/software-dynamic-solver.webp
+binder_assets/10479/software-shot-readiness.webp
+binder_assets/CadPhotos/
+binder_assets/PrototypePhotos/
+binder_assets/WebAppPhotos/
+mentor-needed-assets.md
